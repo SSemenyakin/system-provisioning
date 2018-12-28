@@ -13,6 +13,15 @@ variable "master_instance_type" {
   default = "t2.micro"
 }
 
+variable "master_instance_name" {
+  default = "jenkins_master"
+}
+
+variable "associate_public_ip_address" {
+  default = "true"
+}
+
+
 #SG specific variable
 variable "master_ingress_rules" {
   type = "list"
@@ -58,4 +67,10 @@ variable "jenkins_instance_profile" {
 variable "jenkins_role" {
   default     = "jenkins_instance_role"
   description = "Role for Jenkins`s instance"
+}
+
+variable "AZ" {
+  type = "list"
+
+  default = ["us-east-1a"]
 }

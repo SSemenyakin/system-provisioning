@@ -30,3 +30,10 @@ resource "aws_security_group" "jenkins_slaves" {
 
 ## Egress rules
 
+#### Jenkins slave
+
+
+## Ingress rules
+
+
+## Egress rules
