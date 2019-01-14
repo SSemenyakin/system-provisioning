@@ -27,7 +27,7 @@ variable "master_ingress_rules" {
 
   default = [
     ["22", "22", "tcp", "0.0.0.0/0", "SSH access from anywhere"],
-    ["8080", "8080", "tcp", "0.0.0.0/0", "HTTP from anywhere"],
+    ["8080", "8080", "tcp", "0.0.0.0/0", "Access to Jenkins from anywhere"],
   ]
 }
 
@@ -36,7 +36,8 @@ variable "master_egress_rules" {
 
   default = [
     ["22", "22", "tcp", "0.0.0.0/0", "SSH access from anywhere"],
-    ["8080", "8080", "tcp", "0.0.0.0/0", "HTTP from anywhere"],
+    ["80", "80", "tcp", "0.0.0.0/0", "HTTP to anywhere"],
+    ["443", "443", "tcp", "0.0.0.0/0", "HTTPS to anywhere"],
   ]
 }
 
@@ -53,6 +54,8 @@ variable "slave_egress_rules" {
 
   default = [
     ["22", "22", "tcp", "0.0.0.0/0", "SSH access from anywhere"],
+    ["80", "80", "tcp", "0.0.0.0/0", "HTTP to anywhere"],
+    ["443", "443", "tcp", "0.0.0.0/0", "HTTPS to anywhere"],
   ]
 }
 
