@@ -21,7 +21,6 @@ variable "associate_public_ip_address" {
   default = "true"
 }
 
-
 #SG specific variable
 variable "master_ingress_rules" {
   type = "list"

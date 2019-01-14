@@ -1,5 +1,6 @@
 ### Variables
 variable base_instance_type {}
+
 variable base_ami {}
 variable base_insrance_name {}
 variable availability_zone {}

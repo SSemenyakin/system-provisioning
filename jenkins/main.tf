@@ -10,7 +10,7 @@ provider "aws" {
 ################# Terrafrom Version ###############
 
 terraform {
-  version = "0.11.10"
+  version = "0.11.11"
 
   backend "s3" {
     bucket = "my-aws-infra"
